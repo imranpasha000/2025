@@ -56,11 +56,14 @@ const Header = () => {
             <NavigationMenu>
               <NavigationMenuList className="gap-1">
                 <NavigationMenuItem>
-                  <Link href="/" legacyBehavior passHref>
-                    <NavigationMenuLink className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100">
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/"
+                      className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100"
+                    >
                       Home
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -69,39 +72,56 @@ const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="p-2 min-w-[200px]">
                     <div className="grid gap-1">
-                      <Link href="/inventory/new" legacyBehavior passHref>
-                        <NavigationMenuLink className="px-3 py-2 text-sm rounded-md hover:bg-gray-100">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/inventory/new"
+                          className="px-3 py-2 text-sm rounded-md hover:bg-gray-100"
+                        >
                           New Arrivals
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/inventory/used" legacyBehavior passHref>
-                        <NavigationMenuLink className="px-3 py-2 text-sm rounded-md hover:bg-gray-100">
+                        </Link>
+                      </NavigationMenuLink>
+
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/inventory/used"
+                          className="px-3 py-2 text-sm rounded-md hover:bg-gray-100"
+                        >
                           Used Vehicles
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/inventory/featured" legacyBehavior passHref>
-                        <NavigationMenuLink className="px-3 py-2 text-sm rounded-md hover:bg-gray-100">
+                        </Link>
+                      </NavigationMenuLink>
+
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/inventory/featured"
+                          className="px-3 py-2 text-sm rounded-md hover:bg-gray-100"
+                        >
                           Featured Listings
-                        </NavigationMenuLink>
-                      </Link>
+                        </Link>
+                      </NavigationMenuLink>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/blog" legacyBehavior passHref>
-                    <NavigationMenuLink className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100">
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/blog"
+                      className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100"
+                    >
                       Blog
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/shop" legacyBehavior passHref>
-                    <NavigationMenuLink className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100">
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/shop"
+                      className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100"
+                    >
                       Shop
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
@@ -110,31 +130,45 @@ const Header = () => {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="p-2 min-w-[200px]">
                     <div className="grid gap-1">
-                      <Link href="/about" legacyBehavior passHref>
-                        <NavigationMenuLink className="px-3 py-2 text-sm rounded-md hover:bg-gray-100">
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/about"
+                          className="px-3 py-2 text-sm rounded-md hover:bg-gray-100"
+                        >
                           About Us
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/testimonials" legacyBehavior passHref>
-                        <NavigationMenuLink className="px-3 py-2 text-sm rounded-md hover:bg-gray-100">
+                        </Link>
+                      </NavigationMenuLink>
+
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/testimonials"
+                          className="px-3 py-2 text-sm rounded-md hover:bg-gray-100"
+                        >
                           Testimonials
-                        </NavigationMenuLink>
-                      </Link>
-                      <Link href="/faq" legacyBehavior passHref>
-                        <NavigationMenuLink className="px-3 py-2 text-sm rounded-md hover:bg-gray-100">
+                        </Link>
+                      </NavigationMenuLink>
+
+                      <NavigationMenuLink asChild>
+                        <Link
+                          href="/faq"
+                          className="px-3 py-2 text-sm rounded-md hover:bg-gray-100"
+                        >
                           FAQ
-                        </NavigationMenuLink>
-                      </Link>
+                        </Link>
+                      </NavigationMenuLink>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <Link href="/contact" legacyBehavior passHref>
-                    <NavigationMenuLink className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100">
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/contact"
+                      className="px-3 py-2 text-sm font-medium rounded-md hover:bg-gray-100"
+                    >
                       Contact
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
@@ -142,13 +176,12 @@ const Header = () => {
 
           {/* Right side - Phone, Buttons */}
           <div className="flex items-center space-x-4">
-            
-              <Button variant="ghost"  size="sm">
+            <Button variant="ghost" size="sm">
               <Link href="/sign-in" prefetch={false}>
                 <UserRoundCheck />
-                </Link>
-              </Button>
-            
+              </Link>
+            </Button>
+
             <Button
               variant="outline"
               size="sm"
